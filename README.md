@@ -1,3 +1,18 @@
+**Réponses apporté par la landing page**
+
+Partie 1 :
+Que fait le produit ? simplifie les démarches administrative
+La valeur proposé ? Regrouper vos démarches administratives et vos documents au même endroit afin de créer en un clic vos dossier administratives
+
+Partie 2 : 
+Comment ça fonctionne ?
+Qu'est qui pourrait différencier le produit d'un autre ?
+
+
+Partie 3 : 
+Comment ça va améliorer la vie des gens ?
+Quelle frustration est comblé ?
+
 
 # Carta
 Say hello to Carta, a modern, illustrated site template.
