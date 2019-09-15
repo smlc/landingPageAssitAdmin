@@ -5,7 +5,7 @@ Que fait le produit ? simplifie les démarches administrative
 La valeur proposé ? Regrouper vos démarches administratives et vos documents au même endroit afin de créer en un clic vos dossier administratives
 
 Partie 2 : 
-Comment ça fonctionne ?
+Comment ça fonctionne ? Charger vos documents telles que une pièce d'identité, justificatifs de domicile  dans l'application. Lorsque vous souhaitez créer un dossier pour un  permis de conduire par exemple elle regroupe dans les documents nécessaire.
 Qu'est qui pourrait différencier le produit d'un autre ?
 
 
