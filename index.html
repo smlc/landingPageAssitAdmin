@@ -197,7 +197,7 @@
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
         let formMessage = firebase.database().ref('register');
-        
+
         document
             .getElementById("emailRegistration")
             .addEventListener("submit", formSubmit);
@@ -211,7 +211,6 @@
 
         let newFormMessage = formMessage.push();
         function sendMessage(email) {
-            
             newFormMessage.set({
                 email: email
             });
