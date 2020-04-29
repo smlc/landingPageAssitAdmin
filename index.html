@@ -134,18 +134,34 @@
                     <p class="text--white mb3">
                         Laissez nous votre email on vous contacte !
                     </p>
-                    <div
-                        class="inline-block mr1 no-mr-on-mobile"
-                        style="width: 280px; max-width: 100%;"
-                    >
-                        <input
-                            class="form-control"
-                            type="email"
-                            placeholder="Email"
-                            id="emailRegistration"
-                        />
-                    </div>
-                    <button class="btn btn--secondary">Envoyer</button>
+                    <form action="" method="POST" id="emailRegistrationForm">
+                        <div
+                            class="inline-block mr1 no-mr-on-mobile"
+                            style="width: 280px; max-width: 100%;"
+                        >
+                            <input
+                                class="form-control"
+                                type="email"
+                                placeholder="Email"
+                                id="emailRegistration"
+                            />
+                        </div>
+                        <button
+                            class="btn btn--secondary"
+                            type="submit"
+                            sendMessage()
+                        >
+                            Envoyer
+                        </button>
+                        <p
+                            id="thankYouMessage"
+                            class="text--white mb3"
+                            style="display: none;"
+                        >
+                            Merci ! On a bien reçu votre email on vous
+                            contactera.
+                        </p>
+                    </form>
                 </div>
             </div>
         </main>
@@ -197,26 +213,32 @@
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
-        let formMessage = firebase.database().ref('register');
+        let formMessage = firebase.database().ref("registrations");
 
         document
-            .getElementById("emailRegistration")
+            .getElementById("emailRegistrationForm")
             .addEventListener("submit", formSubmit);
-        
+
         function formSubmit(e) {
             e.preventDefault();
+            
             // Get Values from the DOM
             let email = document.querySelector("#emailRegistration").value;
             sendMessage(email);
+            document.getElementById("emailRegistrationForm").reset();
+            document.querySelector("#thankYouMessage").style.display = "block";
+
+            setTimeout(function () {
+                document.querySelector("#thankYouMessage").style.display =
+                    "none";
+            }, 7000);
         }
 
         let newFormMessage = formMessage.push();
         function sendMessage(email) {
-            newFormMessage.set({
-                email: email
+            newFormMessage.push({
+                email: email,
             });
         }
-
-        
     </script>
 </html>
