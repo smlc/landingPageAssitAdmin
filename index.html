@@ -184,7 +184,20 @@
      https://firebase.google.com/docs/web/setup#available-libraries -->
 
     <script>
-
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCamIECwHr45Cce-1E_bozyZluBOCAVSl0",
+            authDomain: "gestionresa-d8cf6.firebaseapp.com",
+            databaseURL: "https://gestionresa-d8cf6.firebaseio.com",
+            projectId: "gestionresa-d8cf6",
+            storageBucket: "gestionresa-d8cf6.appspot.com",
+            messagingSenderId: "455871432427",
+            appId: "1:455871432427:web:745356572829b89e1560ae",
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        let formMessage = firebase.database().ref('register');
+        
         document
             .getElementById("emailRegistration")
             .addEventListener("submit", formSubmit);
@@ -204,17 +217,6 @@
             });
         }
 
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-            apiKey: "AIzaSyCamIECwHr45Cce-1E_bozyZluBOCAVSl0",
-            authDomain: "gestionresa-d8cf6.firebaseapp.com",
-            databaseURL: "https://gestionresa-d8cf6.firebaseio.com",
-            projectId: "gestionresa-d8cf6",
-            storageBucket: "gestionresa-d8cf6.appspot.com",
-            messagingSenderId: "455871432427",
-            appId: "1:455871432427:web:745356572829b89e1560ae",
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
+        
     </script>
 </html>
